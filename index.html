@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemedicine Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Telemedicine Appointment System</h1>
+        <button id="logoutBtn">Logout</button>
+    </header>
+    
+    <button onclick="window.location.href='appointments.html'">View Appointments</button>
+    
+<div id="checker-container">
+    <div id="symptom-checker">
+        <h2>Symptom Checker</h2>
+        <input type="text" id="symptom-input" placeholder="Enter your symptom">
+        <button id="check-disease-btn">Check Disease</button>
+        <p id="disease-result"></p>
+    </div>
+    
+    <script src="symptomChecker.js"></script>
+
+    <div id="medicine-checker">
+        <h2>Medicine Finder</h2>
+        <input type="text" id="disease-input" placeholder="Enter disease">
+        <button id="check-medicine-btn">Find Medicine</button>
+        <p id="medicine-result"></p>
+    </div>
+    
+    <script src="medicineChecker.js"></script>
+</div>
+
+    <main>
+        <section class="doctor-list">
+            <h2>Available Doctors</h2>
+            <div class="doctor">
+                <h3>Dr. HP Singh</h3>
+                <p>Specialist: Cardiology</p>
+                <button onclick="bookAppointment('Dr. HP Singh')">Book Appointment</button>
+            </div>
+            <div class="doctor">
+                <h3>Dr. Ashu Goel</h3>
+                <p>Specialist: Dermatology</p>
+                <button onclick="bookAppointment('Dr. Ashu Goel')">Book Appointment</button>
+            </div>
+        </section>
+        
+        <section class="appointment-form" id="appointment-form" style="display: none;">
+            <h2>Book an Appointment</h2>
+            <form id="bookingForm">
+                <label for="patient-name">Your Name:</label>
+                <input type="text" id="patient-name" required>
+                
+                <label for="appointment-date">Date:</label>
+                <input type="date" id="appointment-date" required>
+                
+                <label for="appointment-time">Time:</label>
+                <input type="time" id="appointment-time" required>
+                
+                <input type="hidden" id="doctor-name">
+                
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

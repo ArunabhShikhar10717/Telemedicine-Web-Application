@@ -1,0 +1,590 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    text-align: center;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button#logoutBtn {
+    float: right;
+}
+
+/* Appointment List */
+#appointments-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.appointment {
+    background: white;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: left;
+}
+
+.appointment h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+input {
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Login Page */
+#login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+#login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#login-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#login-container button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+#reminder-timer-container {
+    text-align: center;
+    margin: 20px;
+    padding: 15px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#countdown-timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4CAF50;  /* Green when far away */
+    transition: color 0.3s ease;
+}
+
+#countdown-timer.warning {
+    color: #FF9800;  /* Orange when < 30 minutes */
+}
+
+#countdown-timer.urgent {
+    color: #F44336;  /* Red when < 5 minutes */
+}
+.completed {
+    color: #4CAF50; /* Green for completed */
+    font-weight: bold;
+}
+
+.pending {
+    color: #FF9800; /* Orange for pending */
+    font-weight: bold;
+}
+
+button.complete-btn {
+    background-color: #4CAF50; /* Green button for mark completed */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button.complete-btn:hover {
+    background-color: #45a049;
+}/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#logoutBtn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+#logoutBtn:hover {
+    background: #c82333;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px 0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Main Layout */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Doctor List */
+.doctor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.doctor {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(50% - 20px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.doctor:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.doctor h3 {
+    color: #007bff;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.doctor p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Appointment Form */
+.appointment-form {
+    background: #f4f4f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.appointment-form h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border: 1px solid #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+input[type="date"],
+input[type="time"] {
+    cursor: pointer;
+}
+
+/* Appointment List */
+#appointments-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.appointment {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    transition: all 0.3s;
+}
+
+.appointment:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.appointment h3 {
+    color: #007bff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.appointment p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Form Button */
+form button {
+    background: #28a745;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #218838;
+}
+
+/* Timer Section */
+#reminder-timer-container {
+    text-align: center;
+    margin: 40px 0;
+    padding: 25px;
+    background: #f1f1f1;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#countdown-timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #28a745;  
+    transition: color 0.3s ease;
+}
+
+#countdown-timer.warning {
+    color: #ff9800; 
+}
+
+#countdown-timer.urgent {
+    color: #f44336;  
+}
+
+/* Status Colors */
+.completed {
+    color: #28a745; 
+    font-weight: bold;
+}
+
+.pending {
+    color: #ff9800;  
+    font-weight: bold;
+}
+
+/* Completed Button */
+button.complete-btn {
+    background: #28a745; 
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button.complete-btn:hover {
+    background: #218838;
+}
+
+/* Clear Completed Button */
+#clear-completed-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin: 20px 0;
+    background: #f44336;  
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#clear-completed-btn:hover {
+    background: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .doctor {
+        width: 100%;
+    }
+
+    .appointment {
+        max-width: 100%;
+    }
+}
+
+
+#clear-completed-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    background-color: #f44336; /* Red button for removing */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#clear-completed-btn:hover {
+    background-color: #d32f2f;
+}
+/* Center and align the form elements properly */
+.appointment-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Style the form fields uniformly */
+.appointment-form label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+/* Make input fields consistent in size and style */
+.appointment-form input {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* On focus */
+.appointment-form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Style the confirm button */
+.appointment-form button {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.appointment-form button:hover {
+    background-color: #218838;
+}
+
+#notification-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#symptom-checker {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#symptom-input {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#check-disease-btn {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#check-disease-btn:hover {
+    background-color: #0056b3;
+}
+
+#disease-result {
+    font-weight: bold;
+    margin-top: 10px;
+}
+#medicine-checker {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#disease-input {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#check-medicine-btn {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#check-medicine-btn:hover {
+    background-color: #218838;
+}
+
+#medicine-result {
+    font-weight: bold;
+    margin-top: 10px;
+}
+#checker-container {
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 20px;
+}
