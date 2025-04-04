@@ -2,13 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
+    background-color: #84ecea;
     text-align: center;
+    
 }
 
 header {
     background-color: #007bff;
-    color: white;
+    color: rgb(253, 139, 139);
     padding: 20px;
     font-size: 24px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -75,7 +76,14 @@ input {
     justify-content: center;
     height: 100vh;
     background-color: #ffffff;
+
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                url('https://plus.unsplash.com/premium_photo-1673953509975-576678fa6710?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 #login-container form {
     display: flex;
@@ -85,9 +93,21 @@ input {
     width: 100%;
     max-width: 400px;
     padding: 30px;
-    background: white;
+    background: rgb(108, 242, 247);
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#login-container input[type="text"],
+#login-container input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f8ff;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    font-size: 15px;
 }
 
 #login-container h1 {
@@ -100,7 +120,38 @@ input {
     width: 100%;
     padding: 12px;
     font-size: 16px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
+
+#login-container button:hover {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 114, 255, 0.3);
+}
+
+#login-container button:active {
+    transform: scale(0.98);
+}
+
+#loginForm {
+    animation: fadeInUp 0.7s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #reminder-timer-container {
     text-align: center;
     margin: 20px;
@@ -216,9 +267,9 @@ main {
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
-    background: #fff;
+    background: #fbfbfa;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);    
 }
 
 /* Doctor List */
@@ -227,10 +278,13 @@ main {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+    padding: 30px;
+    background: linear-gradient(to right, #a8eff9, #27a0f0);
+    border-radius: 20px;
 }
 
 .doctor {
-    background: #ffffff;
+    background: #84fc74;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -312,7 +366,7 @@ input[type="time"] {
 }
 
 .appointment {
-    background: #fff;
+    background: #f9f656;
     border-radius: 12px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -513,6 +567,8 @@ button.complete-btn:hover {
     align-items: center;
     cursor: pointer;
 }
+
+
 #symptom-checker {
     margin: 20px auto;
     padding: 15px;
@@ -520,14 +576,14 @@ button.complete-btn:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
-    background-color: #f9f9f9;
+    background: linear-gradient(to right, #a8eff9, #27a0f0);
 }
 
 #symptom-input {
     width: 80%;
     padding: 8px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #d7f34a;
     border-radius: 4px;
 }
 
@@ -555,14 +611,14 @@ button.complete-btn:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
-    background-color: #f9f9f9;
+    background: linear-gradient(to right, #a8eff9, #27a0f0);
 }
 
 #disease-input {
     width: 80%;
     padding: 8px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #d7f34a;
     border-radius: 4px;
 }
 
